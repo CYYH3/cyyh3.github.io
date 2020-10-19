@@ -1,4 +1,4 @@
-// 文档加载完毕
+// 文档加载完毕 
 $(function () {
     let type = localStorage.getItem('type');
 
