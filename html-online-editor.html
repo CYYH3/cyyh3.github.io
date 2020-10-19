@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>HTML在线编辑器-2</title>
+	<link rel="icon" href="https://s1.ax1x.com/2020/06/20/NlrtNq.png" type="image/x-icon"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<style>
+		html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+
+        #container {
+            height: 100%;
+            width: auto;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        #input {
+            height: 100%;
+            width: 50%;
+            display: inline-block;
+        }
+
+
+
+        #target {
+            height: 100%;
+            display: inline-block;
+            width: 50%;
+        }
+	</style>
+</head>
+<body onload="init()">
+	<div id="container">
+    	<!--<textarea id="input"></textarea>-->
+		<div id="input"></div>
+        <iframe id='target' frameBorder="0"></iframe>
+    </div>
+	
+	<script>
+		function generate() {
+            var idoc = document.getElementById('target').contentWindow.document;
+
+            idoc.open();
+            //var input = document.getElementById('input');
+            //idoc.write(input.value);
+            idoc.write(editor.getValue());
+            idoc.close();
+        }
+
+		function init() {
+            console.log(`function init`)
+            /*var input = document.getElementById('input');
+        
+            input.addEventListener('keyup',()=>{
+                //console.log('src changed');
+                generate();
+            });*/
+
+            window.editor = ace.edit("input");
+            editor.setTheme("ace/theme/monokai");
+            editor.getSession().setMode("ace/mode/html");
+            editor.setValue(`<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML在线编辑器-2</title>
+</head>
+<body>
+	<h1>这是一个标题</h1>
+	<p>这是一个段落。</p>
+</body>
+</html>`, 1);
+
+            editor.getSession().on('change', function () {
+                generate();
+            });
+
+            editor.focus();
+
+
+            editor.setOptions({
+                fontSize: "16pt",
+                showLineNumbers: false,
+                showGutter: false,
+                vScrollBarAlwaysVisible: true,
+                enableBasicAutocompletion: false, enableLiveAutocompletion: false
+            });
+
+            editor.setShowPrintMargin(false);
+            editor.setBehavioursEnabled(false);
+		}
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" type="text/javascript"></script>
+</body>
+</html>
