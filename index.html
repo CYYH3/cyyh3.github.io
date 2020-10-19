@@ -1,1 +1,150 @@
-
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航</title>
+	<link rel="icon" href="https://ss2.meipian.me/users/16486831/db84b230-7c86-11ea-9bb5-6361f71c4cc3.png?imageView2/2/w/750/h/1400/q/80" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+			font-family: 微软雅黑;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #efeeee;
+			-webkit-user-select: none;
+			user-select: none;
+        }
+        .container{
+            width: 700px;
+            height: 600px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .container .box{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            width: 100px;
+            height: 140px;
+            margin: 20px;
+        }
+        .container .box .img{
+            width: 100px;
+            height: 100px;
+            box-shadow: 18px 18px 30px rgba(0,0,0,0.1),
+            -18px -18px 30px rgba(255,255,255,1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #efeeee;
+            transition: box-shadow .2s ease-out;
+            position: relative;
+        }
+        .container .box .img img{
+            width: 60px;
+            transition: width .2s ease-out;
+        }
+        .container .box a{
+			text-decoration: none;
+            color: black;
+            transition: color 0.5s ease 0s;
+        }
+		.container a{
+			text-decoration: none;
+            color: black;
+            transition: color 0.5s ease 0s;
+		}
+        .container .box .img:hover{
+            box-shadow: 0px 0px 0px rgba(0,0,0,0.1),
+            0px 0px 0px rgba(255,255,255,1),
+            inset 18px 18px 30px rgba(0,0,0,0.1),
+            inset -18px -18px 30px rgba(255,255,255,1);
+            transition: box-shadow .2s ease-out;
+        }
+        .container .box .img:hover img{
+            width: 58px;
+            transition: width .2s ease-out;
+        }
+        .container .box a:hover{
+            color: slategray;
+            transition: color 0.5s ease 0s;
+        }
+		.container a:hover{
+            color: slategray;
+            transition: color 0.5s ease 0s;
+        }
+		.darkmode-layer, .darkmode-toggle {
+  			z-index: 500;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--1-->
+        <div class="box">
+            <div class="img">
+                <a href="/bing" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/8a4f7620-ab9d-11ea-828f-27bb5330c9a2.png-mobile'>
+                </a>
+            </div>
+            <a href="/bing" target="_blank">简 · 搜索</a>
+        </div>
+        <!--2-->
+        <div class="box">
+            <div class="img">
+                <a href="/shoucang" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/db84b230-7c86-11ea-9bb5-6361f71c4cc3.png?imageView2/2/w/750/h/1400/q/80'>
+                </a>
+            </div>
+            <a href="/shoucang" target="_blank">收藏</a>
+        </div>
+        <!--3-->
+        <div class="box">
+            <div class="img">
+                <a href="/iPhone 11系列" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/e9f61d50-7d39-11ea-b7ce-d7dbdd98f1eb.png-mobile'>
+                </a>
+            </div>
+            <a href="/iPhone 11系列" target="_blank">iPhone11系列</a>
+        </div>
+        <!--4-->
+        <div class="box">
+            <div class="img">
+                <a href="/html-online-editor" target="_blank">
+                    <img src='https://s1.ax1x.com/2020/06/20/NlrtNq.png'>
+                </a>
+            </div>
+            <a href="/html-online-editor" target="_blank">HTML编辑器</a>
+        </div>
+        <!--5-->
+        <div class="box">
+            <div class="img">
+                <a href="/games/" target="_blank">
+                    <img src='https://s1.ax1x.com/2020/07/08/UEaE2d.png'>
+                </a>
+            </div>
+            <a href="/games/" target="_blank">小游戏</a>
+        </div>
+	</div>
+	<script src="/darkmode-sc.js"></script>
+	<script>
+  		function addDarkmodeWidget() {
+    		new Darkmode().showWidget();
+  		}
+  		window.addEventListener('load', addDarkmodeWidget);
+	</script>
+</body>
+</html>
