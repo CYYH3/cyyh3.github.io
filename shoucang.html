@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收藏</title>
+	<link rel="icon" href="https://ss2.meipian.me/users/16486831/db84b230-7c86-11ea-9bb5-6361f71c4cc3.png?imageView2/2/w/750/h/1400/q/80" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+			font-family: 微软雅黑;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #efeeee;
+			-webkit-user-select: none;
+			user-select: none;
+        }
+        .container{
+            width: 700px;
+            height: 600px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .container .box{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            width: 100px;
+            height: 140px;
+            margin: 20px;
+        }
+        .container .box .img{
+            width: 100px;
+            height: 100px;
+            box-shadow: 18px 18px 30px rgba(0,0,0,0.1),
+            -18px -18px 30px rgba(255,255,255,1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #efeeee;
+            transition: box-shadow .2s ease-out;
+            position: relative;
+        }
+        .container .box .img img{
+            width: 60px;
+            transition: width .2s ease-out;
+        }
+        .container .box a{
+			text-decoration: none;
+            color: black;
+            transition: color 0.5s ease 0s;
+        }
+		.container a{
+			text-decoration: none;
+            color: black;
+            transition: color 0.5s ease 0s;
+		}
+        .container .box .img:hover{
+            box-shadow: 0px 0px 0px rgba(0,0,0,0.1),
+            0px 0px 0px rgba(255,255,255,1),
+            inset 18px 18px 30px rgba(0,0,0,0.1),
+            inset -18px -18px 30px rgba(255,255,255,1);
+            transition: box-shadow .2s ease-out;
+        }
+        .container .box .img:hover img{
+            width: 58px;
+            transition: width .2s ease-out;
+        }
+        .container .box a:hover{
+            color: slategray;
+            transition: color 0.5s ease 0s;
+        }
+		.container a:hover{
+            color: slategray;
+            transition: color 0.5s ease 0s;
+        }
+		.darkmode-layer, .darkmode-toggle {
+  			z-index: 500;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--1-->
+        <div class="box">
+            <div class="img">
+                <a href="https://www.baidu.com/" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a3c0c1-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://www.baidu.com/" target="_blank">百度</a>
+        </div>
+        <!--2-->
+        <div class="box">
+            <div class="img">
+                <a href="https://www.bilibili.com" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a26130-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://www.bilibili.com" target="_blank">哔哩哔哩</a>
+        </div>
+        <!--3-->
+        <div class="box">
+            <div class="img">
+                <a href="https://www.google.com.hk" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a40ee0-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://www.google.com.hk" target="_blank">Google</a>
+        </div>
+        <!--4-->
+        <div class="box">
+            <div class="img">
+                <a href="https://m.youtube.com" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a3c0c0-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://m.youtube.com" target="_blank">YouTube</a>
+        </div>
+        <!--5-->
+        <div class="box">
+            <div class="img">
+                <a href="https://translate.google.com.hk" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a3e7d0-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://translate.google.com.hk" target="_blank">Google翻译</a>
+        </div>
+        <!--6-->
+        <div class="box">
+            <div class="img">
+                <a href="https://mail.google.com" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a2fd70-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://mail.google.com" target="_blank">Gmail</a>
+        </div>
+        <!--7-->
+        <div class="box">
+            <div class="img">
+                <a href="https://www.python.org/" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a2fd71-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://www.python.org/" target="_blank">Python</a>
+        </div>
+        <!--8-->
+        <div class="box">
+            <div class="img">
+                <a href="https://www.doyoudo.com" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a2af50-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://www.doyoudo.com" target="_blank">doyoudo</a>
+        </div>
+        <!--9-->
+        <div class="box">
+            <div class="img">
+                <a href="https://www.w3school.com.cn" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a34b90-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://www.w3school.com.cn" target="_blank">w3school</a>
+        </div>
+        <!--10-->
+        <div class="box">
+            <div class="img">
+                <a href="https://cn.bing.com" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/d2d725d0-ab9a-11ea-b288-c79f06f60bd7.png-mobile'>
+                </a>
+            </div>
+            <a href="https://cn.bing.com" target="_blank">必应</a>
+        </div>
+        <!--11-->
+        <div class="box">
+            <div class="img">
+                <a href="https://ke.qq.com" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a631c0-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://ke.qq.com" target="_blank">腾讯课堂</a>
+        </div>
+        <!--12-->
+        <div class="box">
+            <div class="img">
+                <a href="https://zh.wix.com/" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a399b0-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://zh.wix.com/" target="_blank">Wix</a>
+        </div>
+        <!--13-->
+        <div class="box">
+            <div class="img">
+                <a href="https://www.apple.com.cn/" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/95e20490-7c8a-11ea-9806-716585abbffa.png-mobile'>
+                </a>
+            </div>
+            <a href="https://www.apple.com.cn/" target="_blank">Apple官网</a>
+        </div>
+        <!--14-->
+        <div class="box">
+            <div class="img">
+                <a href="https://store.steampowered.com" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a32480-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://store.steampowered.com" target="_blank">Steam</a>
+        </div>
+        <!--15-->
+        <div class="box">
+            <div class="img">
+                <a href="https://www.taobao.com/" target="_blank">
+                    <img src='https://ss2.meipian.me/users/16486831/48a40ee1-7c84-11ea-b96c-1d3cea31a0be.png-mobile'>
+                </a>
+            </div>
+            <a href="https://www.taobao.com/" target="_blank">淘宝网</a>
+        </div>
+		<a href="/iPhone 11系列" target="_blank">iPhone 11系列</a>
+		<a href="https://chenyikyan.wixsite.com/fangyizixun" target="_blank">防疫资讯</a>
+		<a href="https://chenyikyan.wixsite.com/sheying" target="_blank">摄影</a>
+	</div>
+	<script src="/darkmode-sc.js"></script>
+	<script>
+  		function addDarkmodeWidget() {
+    		new Darkmode().showWidget();
+  		}
+  		window.addEventListener('load', addDarkmodeWidget);
+	</script>
+</body>
+</html>
