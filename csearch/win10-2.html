@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+	<title>简 · 搜索</title>
+	<link rel="icon" href="https://ss2.meipian.me/users/16486831/8a4f7620-ab9d-11ea-828f-27bb5330c9a2.png-mobile" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style-win102.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="container">
+    <h1 id="timer"><!--简 · 搜索--></h1>
+    <ul class="btn-group">
+        <li data-logo="48a3c0c1-7c84-11ea-b96c-1d3cea31a0be">Baidu</li>
+        <li data-logo="48a40ee0-7c84-11ea-b96c-1d3cea31a0be">Google</li>
+        <li data-logo="d2d725d0-ab9a-11ea-b288-c79f06f60bd7">Bing</li>
+        <li data-logo="496d7e80-ab99-11ea-b276-a90716145f66">Doge</li>
+    </ul>
+    <div class="input">
+        <img src="" id="set">
+        <input type="text" id="searchInput" autocomplete="off">
+    </div>
+</div>
+
+<div class="footer">
+    <a href="https://weibo.com/ishuw" target="blank">@两双筷子</a>制作 | <a href="https://cyy.rthe.net" target="blank">@CYY</a>进行优化 | <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">背景图像设置</a>
+</div>
+<div id="light" class="white_content">
+	<a href="./">必应壁纸版</a><br>
+	<a href="./win10-1">Win 10壁纸版(1)</a><br>
+	<a href="./cyberpunk-1">Cyberpunk(1)</a><br>
+	<a href="./cyberpunk-2">Cyberpunk(2)</a><br>
+	<a href="./cyberpunk-3">Cyberpunk(3)</a><br>
+	<a href=""></a><br>
+	<a href=""></a><br>
+	<!--<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">关闭</a>-->
+	&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<button onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">关闭</button>
+</div> 
+<div id="fade" class="black_overlay"></div>
+
+<!--<script type="text/javascript" src="jquery.slim.min.js"></script>-->
+<script type="text/javascript" src="/zepto-min.js"></script>
+<script type="text/javascript" src="/script.js"></script>
+<script type="text/javascript">
+    // 百度统计
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?465307317d7b9eb2a0c8e12fdee3aa5d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+	//显示时间
+	function showTime() {
+		nowtime = new Date();
+		hour = nowtime.getHours();//时
+		minutes = nowtime.getMinutes(); //分
+		//seconds = nowtime.getSeconds(); //秒
+		//文字增加空格
+		document.getElementById("timer").style = "white-space:pre;";
+		//显示时间
+		document.getElementById("timer").innerText = p(hour) + ":" + p(minutes) /*+ ":" + p(seconds)*/;
+	}
+	setInterval("showTime()", 1000);
+	//月日时分秒小于10补0
+	function p(s) {
+		return s < 10 ? '0' + s : s;
+	}
+</script>
+</body>
+</html>
