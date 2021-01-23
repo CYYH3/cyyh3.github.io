@@ -11,7 +11,7 @@ $(function () {
     $('.btn-group li').each(function(){
         if ($(this).text()==type){
             $(this).addClass('this');
-            let src='../img/'+$(this).attr('data-logo')+'.png';
+            let src='./img/'+$(this).attr('data-logo')+'.png';
             $('#set').attr('src',src);
         }
     })
