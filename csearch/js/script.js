@@ -11,7 +11,7 @@ $(function () {
     $('.btn-group li').each(function(){
         if ($(this).text()==type){
             $(this).addClass('this');
-            let src='https://www.cyyb.tk/csearch/img/'+$(this).attr('data-logo')+'.png';
+            let src='./img/'+$(this).attr('data-logo')+'.png';
             $('#set').attr('src',src);
         }
     })
@@ -28,7 +28,7 @@ $('.btn-group li').click(function(){
     $('.btn-group li').removeClass('this')
     $(this).addClass('this');
     localStorage.setItem('type',$(this).text());
-    let src='https://www.cyyb.tk/csearch/img/'+$(this).attr('data-logo')+'.png';
+    let src='./img/'+$(this).attr('data-logo')+'.png';
     $('#set').attr('src',src);
     $('.container').removeClass('set');
 });
