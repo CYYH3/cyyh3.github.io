@@ -1,0 +1,15 @@
+body {
+    /*background: #f4f4f4;*/
+    /*background-image: url(https://www.yangshangzhen.com/bing/wallpaper);*/
+    background-image: url(https://retiehe.com/backend/bing/1080p);
+}
+.footer {
+    color: white/*#a0a0a0*/;
+    text-shadow: 0px 0px 6px #000000/*black*/;
+}
+.footer a {
+    color: orange/*#666*/;
+}
+.footer a:hover {
+    color: white;
+}

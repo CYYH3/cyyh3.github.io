@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>简 · 搜索</title>
+    <link rel="icon" href="./img/index-icon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/basic.css">
+    <link rel="stylesheet" href="./css/style-bing.css">
+    <link rel="stylesheet" href="./js/Waves/waves.min.css">
+    <!-- 百度统计 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?bc667d9e06cbdd5e053267f81c170cdb";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- End 百度统计 -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WSMWPHC2T1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WSMWPHC2T1');
+    </script>
+    <!-- End Google Analytics -->
+    <!-- Cloudflare Web Analytics --><!--
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "14e57e20d0ed48e2b9dbc5de9f9d52f9", "spa": true}'></script>
+    --><!-- End Cloudflare Web Analytics -->
+    <!-- Microsoft Clarity --><!--
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "6bbpg0iexw");
+    </script>-->
+    <!-- End Microsoft Clarity -->
+</head>
+<body>
+    <div class="container">
+        <h1 id="timer">简 · 搜索</h1>
+        <ul class="btn-group">
+            <li data-logo="baidu">Baidu</li>
+            <li data-logo="google">Google</li>
+            <li data-logo="bing">Bing</li>
+            <li data-logo="doge">Doge</li>
+        </ul>
+        <div class="input">
+            <img src="" id="set">
+            <input type="text" id="searchInput" autocomplete="off" autofocus="autofocus">
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://weibo.com/ishuw" target="blank">@两双筷子</a>制作 | <a href="https://cyy.rthe.net" target="blank">@CYY</a>进行优化 | <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">背景图像设置</a></a>
+    </div>
+    <div id="light" class="white_content">
+        <a href="./win10-1">Win 10壁纸版(1)</a><br>
+        <a href="./win10-2">Win 10壁纸版(2)</a><br>
+        <a href="./cyberpunk-1">Cyberpunk(1)</a><br>
+        <a href="./cyberpunk-2">Cyberpunk(2)</a><br>
+        <a href="./cyberpunk-3">Cyberpunk(3)</a><br>
+        <!--<a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">关闭</a>-->
+        <button class="close" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">关闭</button>
+    </div> 
+    <div id="fade" class="black_overlay"></div>
+
+    <!-- 心知天气 -->
+    <div id="tp-weather-widget"></div>
+    <!-- End 心知天气 -->
+
+    <!--<script type="text/javascript" src="jquery.slim.min.js"></script>-->
+    <script type="text/javascript" src="./js/zepto-min.js"></script>
+    <script type="text/javascript" src="./js/Waves/waves.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/console.js"></script>
+    <script>
+        //显示时间
+        function showTime() {
+            nowtime = new Date();
+            hour = nowtime.getHours();//时
+            minutes = nowtime.getMinutes(); //分
+            //seconds = nowtime.getSeconds(); //秒
+            //文字增加空格
+            document.getElementById("timer").style = "white-space:pre;";
+            //显示时间
+            document.getElementById("timer").innerText = p(hour) + ":" + p(minutes) /*+ ":" + p(seconds)*/;
+        }
+        setInterval("showTime()", 1000);
+        //月日时分秒小于10补0
+        function p(s) {
+            return s < 10 ? '0' + s : s;
+        }
+    </script>
+</body>
+</html>
